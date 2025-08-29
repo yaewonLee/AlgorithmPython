@@ -4,15 +4,15 @@ input = sys.stdin.readline
 
 N = int(input().strip())
 distance = list(map(int, input().split()))
-cost = list(map(int, input().split()))
+price = list(map(int, input().split()))
 
-min_price = cost[0]
-total_cost = 0
+min_price = price[0]
+total = 0
 
 for i in range(N-1):
-    if cost[i + 1] < min_price:
-        min_price = cost[i + 1]
+    if price[i] < min_price:
+        min_price = price[i]
 
-    total_cost += min_price * distance[i]
+    total += min_price * distance[i]
 
-print(total_cost)
+print(total)
